@@ -26,27 +26,32 @@ const Contact = () => {
     const data = {
       data: [
         {
-          'Mobile No': phone,
+          Last_Name: 'NA',
+          Year: 'NA',
+          Model: 'NA',
+          Part: 'NA',
+          Make: 'NA',
+          Problem: 'NA',
+          Case: 'SAAS',
+          Phone_3: phone,
+          Call_Status: 'NA',
+          Intent: 'NA',
+          Number_Type: 'NA',
+          Carrier: 'NA',
         },
       ],
     };
 
-    const token = await getAccessToken();
-    console.log(token)
-    const response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await axios.post('https://master--meek-custard-97937a.netlify.app/.netlify/functions/myFunction', data);
 
-    const responseData = await response.json();
-    if (response.ok) {
-      console.log('Data saved to Zoho CRM', responseData);
-    } else {
-      console.error('Error saving data to Zoho CRM', responseData);
+      if (response.status === 200) {
+        console.log('Data saved to Zoho CRM', response.data);
+      } else {
+        console.error('Error saving data to Zoho CRM', response.data);
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
 
@@ -55,9 +60,7 @@ const Contact = () => {
       <h1 className="primary-heading">Want a demo?</h1>
       <h1 className="primary-heading">Let Us Help You</h1>
       <div className="contact-form-container">
-        <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-        <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        <input type="text" placeholder="Mobile Phone No." value={phone} onChange={(e) => setPhone(e.target.value)} />
+        <input className="outlined-input" type="text" placeholder="Enter Your Mobile Phone No." value={phone} onChange={(e) => setPhone(e.target.value)} />
         <button className="secondary-button" onClick={handleSubmit}>
           Submit
         </button>
