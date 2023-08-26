@@ -508,3 +508,56 @@ nav {
   border-color: #007BFF !important;   /* Change border color on focus */
   outline: none;           /* Remove default browser outline */
 }
+
+/* Existing styles... */
+
+/* Adjust the size of the country flag */
+.react-phone-number-input__country-select-arrow {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* Adjust the size of the country flag in the dropdown */
+.react-phone-number-input__country-option-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* Style the phone input to match the .outlined-input class */
+.react-phone-number-input__input {
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.react-phone-number-input__input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Style the dropdown of countries */
+.react-phone-number-input__country-select {
+  border: 2px solid #333;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  width: auto;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.react-phone-number-input__country-select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Adjust the dropdown list to match the overall design */
+.react-phone-number-input__country-select-dropdown {
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-shadow: none;
+}
