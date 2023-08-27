@@ -36,10 +36,6 @@ const Navbar = () => {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
     },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
-    },
   ];
   return (
     <nav>
@@ -51,9 +47,6 @@ const Navbar = () => {
         <a href="">About</a>
         <a href="">Testimonials</a>
         <a href="">Contact</a>
-        <a href="">
-          <BsCart2 className="navbar-cart-icon" />
-        </a>
         <button className="primary-button">Sign Up Now</button>
       </div>
       <div className="navbar-menu-container">
