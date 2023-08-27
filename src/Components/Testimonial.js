@@ -11,7 +11,7 @@ const Testimonial = () => {
         <h1 className="primary-heading">What They Are Saying</h1>
       </div>
       <div className="testimonial-section-bottom">
-        <img src={ProfilePic} alt="" />
+        <img src={ProfilePic} alt="" loading="lazy"/>
         <p>Interesting concept!</p>
         <div className="testimonials-stars-container">
           <AiFillStar />
@@ -23,7 +23,7 @@ const Testimonial = () => {
         <h2>Insurance Auto Auction (IAA) CEO</h2>
       </div>
       <div className="testimonial-section-bottom">
-        <img src={ProfilePic2} alt="" />
+        <img src={ProfilePic2} alt="" loading="lazy"/>
         <p>I love how it frees up our agents to focus on big deals. Auto Sage AI is a game-changer for our business</p>
         <div className="testimonials-stars-container">
           <AiFillStar />

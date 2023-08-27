@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="" loading="lazy"/>
       </div>
       <div className="navbar-links-container">
         <a href="#home" onClick={() => scrollToSection('home')}>
