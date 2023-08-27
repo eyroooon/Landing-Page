@@ -37,16 +37,32 @@ const Navbar = () => {
       icon: <PhoneRoundedIcon />,
     },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav>
       <div className="nav-logo-container">
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Testimonials</a>
-        <a href="">Contact</a>
+        <a href="#home" onClick={() => scrollToSection('home')}>
+          Home
+        </a>
+        <a href="#about" onClick={() => scrollToSection('about')}>
+          About
+        </a>
+        <a href="#testimonials" onClick={() => scrollToSection('testimonials')}>
+          Testimonials
+        </a>
+        <a href="#contact" onClick={() => scrollToSection('contact')}>
+          Contact
+        </a>
         <button className="primary-button">Sign Up Now</button>
       </div>
       <div className="navbar-menu-container">
