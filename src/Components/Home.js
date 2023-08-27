@@ -9,7 +9,7 @@ const Home = () => {
       <Navbar />
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
-          <img src={BannerBackground} alt="" />
+          <img src={BannerBackground} alt="" loading="lazy"/>
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">The Best Partner for Your Yard's Calls!</h1>
@@ -24,6 +24,7 @@ const Home = () => {
               title="Video"
               src="https://www.facebook.com/plugins/video.php?height=323&href=https%3A%2F%2Fwww.facebook.com%2F100000237951579%2Fvideos%2F827553928777401%2F&show_text=false&width=560&t=0"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              loading="lazy" 
             ></iframe>
           </div>
         </div>
