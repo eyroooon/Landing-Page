@@ -29,18 +29,24 @@ const Contact = () => {
 
     return (
       <div className="contact-page-wrapper" id="contact">
-        <h1 className="primary-heading">Want a demo?</h1>
-        <h1 className="primary-heading">Let Us Help You</h1>
+        <h1 className="primary-heading">Is our AI natural enough?</h1>
+        <h1 className="primary-heading">Watch more videos of AutoPartsAI naturally talking to customers</h1>
         <div className="contact-form-container">
           <PhoneInput
             className="outlined-input"
-            placeholder="Enter your phone number"
+            placeholder="Enter a valid MOBILE phone to watch more!"
             value={phone}
             onChange={setPhone}
+            defaultCountry='US'
           />
 
           <div className="terms-checkbox-container">
-            <input type="checkbox" id="terms" />
+            <input
+              type="checkbox"
+              id="terms"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
             <label htmlFor="terms">
               I agree to the{' '}
               <a
@@ -52,7 +58,7 @@ const Contact = () => {
               </a>
             </label>
           </div>
-          <button className="secondary-button" onClick={handleSubmit}>
+          <button className="secondary-button" onClick={handleSubmit} disabled={!isChecked}>
             Submit
           </button>
         </div>

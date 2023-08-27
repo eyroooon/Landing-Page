@@ -653,3 +653,10 @@ nav {
 .privacy-section a:hover {
   text-decoration: underline;
 }
+
+button:disabled {
+  background-color: #cccccc; /* Gray background */
+  color: #888888;           /* Darker text color */
+  cursor: not-allowed;      /* Display a "not allowed" cursor */
+  border: 1px solid #aaaaaa; /* Darker border color */
+}

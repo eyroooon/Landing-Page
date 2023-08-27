@@ -63,7 +63,7 @@ const Navbar = () => {
         <a href="#contact" onClick={() => scrollToSection('contact')}>
           Contact
         </a>
-        <button className="primary-button">Sign Up Now</button>
+        <button onClick={() => scrollToSection('contact')} className="primary-button">Sign Up Now</button>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
