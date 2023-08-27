@@ -30,7 +30,7 @@ const Contact = () => {
     return (
       <div className="contact-page-wrapper" id="contact">
         <h1 className="primary-heading">Is our AI natural enough?</h1>
-        <h1 className="primary-heading">Watch more videos of AutoPartsAI naturally talking to customers</h1>
+        <p>Watch more videos of AutoPartsAI naturally talking to customers</p> {/* Changed this line to a paragraph */}
         <div className="contact-form-container">
           <PhoneInput
             className="outlined-input"
@@ -38,6 +38,7 @@ const Contact = () => {
             value={phone}
             onChange={setPhone}
             defaultCountry='US'
+            style={{ color: 'red' }} // Added this line to change placeholder color
           />
 
           <div className="terms-checkbox-container">
